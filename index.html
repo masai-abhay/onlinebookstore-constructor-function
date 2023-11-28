@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function createauthor(name,birthyear,nationality){
+
+this.name = name;
+this.birthyear = birthyear;
+this.nationality = nationality;
+
+}
+
+
+function createbook(title,author,genre,price){
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+    this.price = price;
+}
+
+createbook.prototype.getbookinfo = function(){
+    console.log(this.title);
+    console.log(this.author);
+    console.log(this.genre);
+    console.log(this.price);
+
+}
+
+let author1 = new createauthor("abhay",2001,"indian");
+let author2 = new createauthor("himanshu",2002,"indian");
+let author3 = new createauthor("kunal",1998,"indian");
+
+let book1 = new createbook("the mind", author1, "mistery", 300)
+let book2 = new createbook("money heast", author2,"adventure", 250 )
+let book3 = new createbook("tiger3", author3,"action",100)
+
+
+book1.getbookinfo();
+book2.getbookinfo();
+book3.getbookinfo();
+
+</script>
+</html>
